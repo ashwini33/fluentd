@@ -14,6 +14,7 @@ chmod 644 /etc/systemd/system/fluentd.service
 systemctl daemon-reload
 systemctl restart fluentd.service
 systemctl enable fluentd.service
+systemctl status fluentd.service
 
 
 
