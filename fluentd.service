@@ -1,0 +1,10 @@
+[Unit]
+Description=Fluentd systemd service.
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /usr/bin/fluentd.sh
+
+[Install]
+WantedBy=multi-user.target
+
