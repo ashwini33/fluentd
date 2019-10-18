@@ -1,9 +1,9 @@
 #!/bin/bash
 DEBIAN_FRONTEND=noninteractive apt-get update -y
 DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
-apt-get install ruby ruby-dev
-apt-get install build-essential
-gem install fluentd --no-ri --no-rdoc
+apt-get install ruby ruby-dev -y
+apt-get install build-essential -y
+gem install fluentd --no-ri --no-rdoc 
 /usr/local/bin/fluentd --setup /etc/fluent
 gem install fluent-plugin-s3
 cp ./fluentd.sh /usr/bin/
